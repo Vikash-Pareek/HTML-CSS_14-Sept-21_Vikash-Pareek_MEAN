@@ -27,66 +27,71 @@
     <form id="form-section" action="#" method="GET">
 
         <div id="form-title-group">
-            <h3 class="title-text">BUG REPORT</h3>
+            <h3>Bug Report</h3>
         </div>
 
-        <div class="title-group">
-            <label>Title:*</label>
-            <input type="text" required />
-        </div>
-        <div class="description-group">
-            <label>Description:*</label>
-            <textarea rows="3" required></textarea>
-        </div>
-        <div class="os-group">
-            <label>Operating System:</label>
-            <select>
-                <option value="">Select Operating System</option>
-                <option value="1">Windows</option>
-                <option value="2">Mac OS</option>
-                <option value="3">Linux</option>
-            </select>
-        </div>
-        <div class="product-group">
-            <label>Product:*</label>
-            <select required="">
-                <option value="">Select Product</option>
-                <option value="1">Mutual Funds App</option>
-                <option value="2">E-Commerce Website</option>
-                <option value="3">Rental Mobile App</option>
-                <option value="4">Banking Website</option>
-                <option value="5">Agro Based App</option>
-            </select>
-        </div>
-        <div class="version-group">
-            <label>Version:*</label>
-            <input type="number" required />
-        </div>
-        <div class="license-group">
-            <label>License:</label>
-            <div>
-                <input type="radio" name="radio">
-                <label class="license-label">Free</label>
-                <input type="radio" name="radio">
-                <label>Business</label>
+        <div id="form-fields-group">
+            <div class="title-group">
+                <label>Title:*</label>
+                <input type="text" required />
+            </div>
+            <div class="description-group">
+                <label>Description:*</label>
+                <textarea rows="3" required></textarea>
+            </div>
+            <div class="os-group">
+                <label>Operating System:</label>
+                <select>
+                    <option value="">Select Operating System</option>
+                    <option value="1">Windows</option>
+                    <option value="2">Mac OS</option>
+                    <option value="3">Linux</option>
+                </select>
+            </div>
+            <div class="product-group">
+                <label>Product:*</label>
+                <select required="">
+                    <option value="">Select Product</option>
+                    <option value="1">Mutual Funds App</option>
+                    <option value="2">E-Commerce Website</option>
+                    <option value="3">Rental Mobile App</option>
+                    <option value="4">Banking Website</option>
+                    <option value="5">Agro Based App</option>
+                </select>
+            </div>
+            <div class="version-group">
+                <label>Version:*</label>
+                <input type="number" class="version-input" required />
+            </div>
+            <div class="license-group">
+                <label>License:</label>
+                <div>
+                    <input type="radio" name="radio" id="free-radio">
+                    <label class="license-label" for="free-radio">Free</label>
+                    <input type="radio" name="radio" id="business-radio">
+                    <label for="business-radio">Business</label>
+                </div>
+            </div>
+            <div class="severity-group">
+                <label>Severity:</label>
+                <select>
+                    <option value="">Select Severity</option>
+                    <option value="1">Critical</option>
+                    <option value="2">Mild</option>
+                    <option value="3">Minor</option>
+                </select>
+            </div>
+            <div class="attachment-group">
+                <label>Attachments:</label>
+                <div class="attachment-input-btn-grp">
+                    <input type="file" class="attachment-input" id="file-select" />
+                    <label class="attachment-btn" for="file-select">Choose File</label>
+                </div>
             </div>
         </div>
-        <div class="severity-group">
-            <label>Severity:</label>
-            <select>
-                <option value="">Select Severity</option>
-                <option value="1">Critical</option>
-                <option value="2">Mild</option>
-                <option value="3">Minor</option>
-            </select>
-        </div>
-        <div class="attachment-group">
-            <label>Attachments:</label>
-            <input type="file" />
-        </div>
+
         <div class="form-btn-group">
             <button class="submit-btn" type="submit">Send</button>
-            <button class="clear-fields-btn" type="reset">Reset Fields</button>
         </div>
     </form>
 

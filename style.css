@@ -5,16 +5,9 @@
 }
 
 
-/* Color Variables */
-:root {
-    --clr-bg: #C8E3FF;
-    --clr-text: #4895EF;
-}
-
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--clr-bg);
     display: grid;
     place-items: center;
     font-family: 'Poppins-600';
@@ -23,17 +16,19 @@ body {
 #nav-group {
     display: flex;
     align-items: center;
-    width: 70vw;
-    padding: 1rem 0 2rem 0;
+    justify-content: space-between;
+    width: 1000px;
+    padding: 0.5rem 0;
+    margin: 2rem 0;
+    border-bottom: 0.2rem solid #eee;
 }
 
 .page-title-text {
     font-size: 1.5rem;
-    flex-grow: 1;
 }
 
 #nav-group a {
-    color: var(--clr-text);
+    color: #00be82;
     text-decoration: none;
 }
 
@@ -41,29 +36,26 @@ body {
     margin-right: 2rem;
 }
 
-.title-text {
-    text-transform: uppercase;
-    color: var(--clr-text);
-    margin: 2.5rem 0;
-    text-decoration: underline;
-    text-align: center;
-}
-
 #form-section {
-    width: 25vw;
-    height: 75vh;
-    padding: 0 4rem 4rem 4rem;
-    border: 0.3rem solid var(--clr-text);
-    border-radius: 1rem;
+    width: 600px;
+    border: 0.2rem solid #ccc;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    color: var(--clr-text);
-    overflow: auto;
-    scrollbar-width: none;      /* Mozilla Firefox */
+    margin-bottom: 3rem;
 }
 
-::-webkit-scrollbar {       /* Google Chrome */
-    display: none;
+#form-title-group {
+    background-color: #cccccc;
+    height: 5rem;
+    color: #fff;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#form-fields-group {
+    padding: 2rem 2rem 0 2rem;
 }
 
 .title-group, 
@@ -78,6 +70,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.version-input {
+    width: 13rem;
+}
+
 .license-group {
     margin-bottom: 2rem;
 }
@@ -86,74 +82,89 @@ body {
     margin-right: 4rem;
 }
 
-input, textarea, select {
+input, textarea {
     background-color: transparent;
-    border: 0.1rem solid var(--clr-text);
+    border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
     padding: 0.4rem;
-    color: #4267b2;
     font-family: 'Poppins-600';
     font-size: 1rem;
+}
+
+input, textarea, label, option {
+    color: #6c757d;
+}
+
+select {
+    background-color: #00be82;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    font-family: 'Poppins-600';
+    font-size: 1rem;
+    color: #fff;
+    border: 0.1rem solid #00be82;
+    cursor: pointer;
+}
+
+option {
+    background-color: #fff;
 }
 
 input:focus, textarea:focus, select:focus {
     outline: none;
 }
 
-select {
-    cursor: pointer;
+.attachment-input-btn-grp {
+    display: flex;
 }
 
-#form-section span {
-    color: tomato;
+.attachment-input {
+    flex-grow: 1;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border-right: none;
+
+    /* opacity: 0; */
+    /* position: relative; */
+    /* z-index: 10; */
+}
+
+/* .attachment-input::placeholder {
+    
+} */
+
+.attachment-btn {
+    border-radius: 0 0.5rem 0.5rem 0;
+    border-left: none;
+    border: 0.1rem solid #ccc;
+    padding: 0.4rem 1rem;
+    font-family: 'Poppins-600';
     font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #ccc;
 }
 
 .form-btn-group {
-    margin-top: 2rem;
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-
-.form-btn-group button {
-    width: 10rem;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    border: none;
-    box-shadow: 3px 4px 12px 1px var(--clr-text);
-    font-family: 'Poppins-600';
+    justify-content: right;
+    padding: 1rem 2rem;
+    background-color: #eee;
 }
 
 .submit-btn {
-    background-color: var(--clr-text);
-    color: var(--clr-bg);
+    background-color: #00be82;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins-600';
 }
 
 .submit-btn:hover {
-    background-color: transparent;
-    color: var(--clr-text);
+    opacity: 0.8;
 }
 
 .submit-btn:active {
-    box-shadow: none;
-    transform: translateY(0.2rem);
-}
-
-.clear-fields-btn {
-    background-color: transparent;
-    color: var(--clr-text);
-}
-
-.clear-fields-btn:hover {
-    background-color: var(--clr-text);
-    color: var(--clr-bg);
-}
-
-.clear-fields-btn:active {
-    box-shadow: none;
-    transform: translateY(0.2rem);
+    transform: translateY(0.1rem);
 }
